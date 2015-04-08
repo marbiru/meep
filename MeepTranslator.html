@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<h1> Meep Meep Mee Meep </h1>
+
+<button id="mee_button">Mee</button>
+
+<p id="output"></p>
+
+<script>
+document.getElementById("mee_button").onclick = print_mee;
+
+function print_mee() {
+    document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + ' Mee'
+}
+</script>
+
+</body>
+</html> 
