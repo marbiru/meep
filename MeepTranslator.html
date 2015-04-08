@@ -46,7 +46,7 @@ function print_meep() {
 // Defines "word count" function, that counts how many times user has clicked "mee" or "meep"
 
 function word_count(str) {
-  return str.split(" ").length;
+  return str.split(" ").length - 1;
 }
 
 // This makes the 'Translate' button output an English-language translation of the 'output' field
@@ -54,7 +54,7 @@ function word_count(str) {
 document.getElementById("translate_button").onclick = print_translation;
 
 function print_translation() {
-    document.getElementById("translation").innerHTML = word_count("hello world jim");
+    document.getElementById("translation").innerHTML = word_count(document.getElementById("output").innerHTML);
 }
 
 
