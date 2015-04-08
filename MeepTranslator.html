@@ -9,13 +9,13 @@
   2) Press <i>Translate</i> button to get an English-language translation</br>
 </p>
 
-<!-- The Mee and Meep buttons allow the user to print Mees and Meeps onto the screen to create Mee(p)-based communications -->
+<!-- The Mee and Meep buttons allow the user to print Mees and Meeps onto the screen in order to create a Mee(p)-filled sentence -->
 
 <button id="meep_button">Meep</button>
 <button id="mee_button">Mee</button>
 <button id="clear_button">(Clear Meeps)</button>
 
-<!-- the output field is where the Mees and Meeps get printed. The '&nbsp;' is a non-breaking blank character in html; it's there to create a linebreak before the "Translate" button even before the Mee and Meep buttons have been pressed -->
+<!-- the input field is where the Mees and Meeps get printed. The '&nbsp;' is a non-breaking blank character in html; it's there to create a linebreak before the "Translate" button even if the Mee and Meep buttons have not been pressed yet -->
 
 <p id="input">&nbsp;</p>
 
@@ -27,7 +27,7 @@
 
 <script>
 
-// This makes the 'Mee' button output 'Mee's on screen
+// This makes the 'Mee' button print 'Mee's on screen
 
 document.getElementById("mee_button").onclick = print_mee;
 
@@ -35,7 +35,7 @@ function print_mee() {
     document.getElementById("input").innerHTML = document.getElementById("input").innerHTML + ' Mee'
 }
 
-// This makes the 'Meep' button output 'Meep' on screen
+// This makes the 'Meep' button print 'Meep' on screen
 
 document.getElementById("meep_button").onclick = print_meep;
 
@@ -43,7 +43,7 @@ function print_meep() {
     document.getElementById("input").innerHTML = document.getElementById("input").innerHTML + ' Meep'
 }
 
-// This makes the 'Clear' button, which resests the input
+// This makes the 'Clear' button, which resests the on-screen mee(p)-sentence
 
 document.getElementById("clear_button").onclick = clear_meeps;
 
@@ -71,7 +71,7 @@ var translation_list = [
 "Don’t let anyone ever make you feel like you don’t deserve what you want."
 ];
 
-// This makes the 'Translate' button output an English-language translation of the 'output' field
+// This makes the 'Translate' button print an English-language translation of the 'input' field
 
 document.getElementById("translate_button").onclick = print_translation;
 
