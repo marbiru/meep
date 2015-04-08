@@ -44,12 +44,18 @@ function print_meep() {
 
 // a list of english-language sentences 
 
-
 var translation_list = [
-"<mournful silence>",
+"(a meepless silence)",
 "Ouch!",
 "Get out!",
-"Zap my cat!"
+"Zap my cat!",
+"You sunk my battleship!",
+"Do you feel lucky, punk?",
+"There's a snake in my boot!",
+"She walks in beauty, like the night",
+"Frankly, my dear, I don't give a damn.",
+"My very easy method just speeds up naming planets",
+"This town ain't big enough for the two of us."
 ];
 
 // This makes the 'Translate' button output an English-language translation of the 'output' field
@@ -57,9 +63,8 @@ var translation_list = [
 document.getElementById("translate_button").onclick = print_translation;
 
 function print_translation() {
-
   var meep_count = document.getElementById("output").innerHTML.split(" ").length - 1;
-  document.getElementById("translation").innerHTML = meep_count;
+  document.getElementById("translation").innerHTML = '"' + translation_list[meep_count] + '"';
 }
 
 
