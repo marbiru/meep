@@ -42,19 +42,24 @@ function print_meep() {
     document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + ' Meep'
 }
 
+// a list of english-language sentences 
 
-// Defines "word count" function, that counts how many times user has clicked "mee" or "meep"
 
-function word_count(str) {
-  return str.split(" ").length - 1;
-}
+var translation_list = [
+"<mournful silence>",
+"Ouch!",
+"Get out!",
+"Zap my cat!"
+];
 
 // This makes the 'Translate' button output an English-language translation of the 'output' field
 
 document.getElementById("translate_button").onclick = print_translation;
 
 function print_translation() {
-    document.getElementById("translation").innerHTML = word_count(document.getElementById("output").innerHTML);
+
+  var meep_count = document.getElementById("output").innerHTML.split(" ").length - 1;
+  document.getElementById("translation").innerHTML = meep_count;
 }
 
 
