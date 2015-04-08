@@ -13,6 +13,7 @@
 
 <button id="meep_button">Meep</button>
 <button id="mee_button">Mee</button>
+<button id="clear_button">(Clear Meeps)</button>
 
 <!-- the output field is where the Mees and Meeps get printed. The '&nbsp;' is a non-breaking blank character in html; it's there to create a linebreak before the "Translate" button even before the Mee and Meep buttons have been pressed -->
 
@@ -42,13 +43,21 @@ function print_meep() {
     document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + ' Meep'
 }
 
+// This makes the 'Clear' button, which resests the input
+
+document.getElementById("clear_button").onclick = clear_meeps;
+
+function clear_meeps() {
+    document.getElementById("output").innerHTML = '&nbsp;'
+}
+
 // a list of english-language sentences 
 
 var translation_list = [
 "(a meepless silence)",
 "Ouch!",
 "Get out!",
-"Zap my cat!",
+"Eat this cat",
 "You sunk my battleship!",
 "Do you feel lucky, punk?",
 "There's a snake in my boot!",
@@ -64,7 +73,7 @@ document.getElementById("translate_button").onclick = print_translation;
 
 function print_translation() {
   var meep_count = document.getElementById("output").innerHTML.split(" ").length - 1;
-  document.getElementById("translation").innerHTML = '"' + translation_list[meep_count] + '"';
+  document.getElementById("translation").innerHTML = "&nbsp;" + translation_list[meep_count];
 }
 
 
