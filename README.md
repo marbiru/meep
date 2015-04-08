@@ -13,3 +13,7 @@ Translates meep-based communications into English
 ### meep meep meep: why?
 
 This is a project to help me learn to code. I thought it would be fun.
+
+### meep meep meep meep: License
+
+This project is open-source under an MIT license. It might be a fun first coding project to introduce newbies to coding since there's not much to it.
