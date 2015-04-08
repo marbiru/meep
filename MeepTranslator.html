@@ -7,14 +7,26 @@
 <h1> Meep Meep Mee Meep </h1>
 
 <button id="mee_button">Mee</button>
+<button id="meep_button">Meep</button>
 
 <p id="output"></p>
 
 <script>
+
+// Mee button: outputs 'Mee'
+
 document.getElementById("mee_button").onclick = print_mee;
 
 function print_mee() {
     document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + ' Mee'
+}
+
+// Meep button: outputs 'Meep' on screen
+
+document.getElementById("meep_button").onclick = print_meep;
+
+function print_meep() {
+    document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + ' Meep'
 }
 </script>
 
