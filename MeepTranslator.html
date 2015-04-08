@@ -72,8 +72,12 @@ var translation_list = [
 document.getElementById("translate_button").onclick = print_translation;
 
 function print_translation() {
-  var meep_count = document.getElementById("output").innerHTML.split(" ").length - 1;
+  var meep_count = document.getElementById("input").innerHTML.split(" ").length - 1;
+  if (meep_count < translation_list.length) {
   document.getElementById("translation").innerHTML = "&nbsp;" + translation_list[meep_count];
+  } else {
+  document.getElementById("translation").innerHTML = "&nbsp;" + "Woah woah woah, that's a bit meeping much."
+  }
 }
 
 
