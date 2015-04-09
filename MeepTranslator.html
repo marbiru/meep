@@ -71,19 +71,26 @@ var translation_list = [
 "Don't let anyone ever make you feel like you don't deserve what you want."
 ];
 
+// This initialises the easter-egg counter
+
+var easter_eggs = 0
+
 // This makes the 'Translate' button print an English-language translation of the 'input' field
 
 document.getElementById("translate_button").onclick = print_translation;
 
 function print_translation() {
+  easter_eggs = easter_eggs + 1;
   var meep_count = document.getElementById("input").innerHTML.split(" ").length - 1;
-  if (meep_count < translation_list.length) {
-  document.getElementById("translation").innerHTML = "&nbsp;" + translation_list[meep_count];
+  if (meep_count === 0) {
+      document.getElementById("translation").innerHTML = "(a meepless silence)";
+  } else if (easter_eggs == 4) {
+      document.getElementById("translation").innerHTML = document.getElementById("input").innerHTML.replace(/Meep/g, 'Beep').replace(/Mee/g, 'Bee');
+  } else if (meep_count < translation_list.length) {
+      document.getElementById("translation").innerHTML = "&nbsp;" + translation_list[meep_count];
   } else {
   document.getElementById("translation").innerHTML = "&nbsp;" + "Woah woah woah, that's a bit meeping much."
   }
-}
-
 
 </script>
 
