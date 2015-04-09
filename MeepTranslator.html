@@ -84,9 +84,9 @@ function print_translation() {
   var meep_count = document.getElementById("input").innerHTML.split(" ").length - 1;
   if (meep_count === 0) {
       document.getElementById("translation").innerHTML = "(a meepless silence)";
-  } else if (easter_eggs == 4) {
+  } else if (easter_eggs == 3) {
       document.getElementById("translation").innerHTML = document.getElementById("input").innerHTML.replace(/Meep/g, 'Beep').replace(/Mee/g, 'Bee');
-  } else if (easter_eggs == 9) {
+  } else if (easter_eggs == 7) {
     //amusingly, if you do a straight Meep --> Mee and Mee --> Meep switch then EVERYTHING ends up as Meep... because all the Meeps get changed to Meeps and back. Hence our intermediate use of Placeholder here
       document.getElementById("translation").innerHTML = document.getElementById("input").innerHTML.replace(/Meep/g, 'Placeholder').replace(/Mee/g, 'Meep').replace(/Placeholder/g, 'Mee');
   } else if (meep_count < translation_list.length) {
