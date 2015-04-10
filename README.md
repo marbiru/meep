@@ -10,7 +10,7 @@ Translates meep-based communications into English
 
 4) humour
 
-### meep meep meep: how?
+## meep meep meep: how?
 
 The translator takes the length of the input string (number of words/number of meeps) and returns an english-language string of the same word-length. There is no actual difference between inputs of "mee" and inputs of "meep" to what the translation actually does, but the user doesn't know that I guess. 
 
