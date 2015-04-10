@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:200">
 </head>
 <body>
 
 <h1> Meep Meep Mee Meep </h1>
-<p> 1) Press <i>Mee</i> and <i>Meep</i> buttons to write Mee(p)-based communication</br>
-  2) Press <i>Translate</i> button to get an English-language translation</br>
+<p class="instructions"> 1) Press <i>Mee</i> and <i>Meep</i> buttons to write Mee(p)-based communication</br>
+  2) Press <i>Translate</i> to get an English-language translation</br>
 </p>
 
 <!-- The Mee and Meep buttons allow the user to print Mees and Meeps onto the screen in order to create a Mee(p)-filled sentence -->
 
-<button id="meep_button">Meep</button>
-<button id="mee_button">Mee</button>
-<button id="clear_button">(Clear Meeps)</button>
+<p class="buttons">
+<button id="meep_button" class="pure-button">Meep</button>
+<button id="mee_button" class="pure-button">Mee</button>
+<button id="clear_button" class="pure-button">(Clear Meeps)</button>
+</p>
 
 <!-- the input field is where the Mees and Meeps get printed. The '&nbsp;' is a non-breaking blank character in html; it's there to create a linebreak before the "Translate" button even if the Mee and Meep buttons have not been pressed yet -->
 
-<p id="input">&nbsp;</p>
+<p id="input" class="basic">&nbsp;</p>
 
 <!-- the translate button is what the user hits to get an English-language translation of their mee(p) -sentence -->
 
-<button id="translate_button">Translate!</button>
+<p class="buttons">
+<button id="translate_button" class="pure-button">Translate!</button>
+</p>
 
-<p id="translation">&nbsp;</p>
+<p id="translation" class="basic">&nbsp;</p>
 
 <script>
 
@@ -97,6 +103,35 @@ function print_translation() {
   }
 
 </script>
+
+<style>
+
+.basic {
+  font-size: 24px;
+  font-weight: normal;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+.instructions {
+  font-size: 18px;
+  color: #777;
+  line-height: 1.6;
+  font-weight: 100;
+  text-align: center;
+}
+
+.buttons {
+  text-align:center;
+}
+
+h1 {
+  color: #4B4B4D;
+  font-size: 40px;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+</style>
 
 </body>
 </html> 
