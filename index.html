@@ -92,6 +92,7 @@ var easter_eggs = 0
 document.getElementById("translate_button").onclick = print_translation;
 
 function print_translation() {
+  //increments the easter_egg counter. Every time someone clicks "translate" the easter_egg counter goes up by one, so that we can make it happen that every X translations the translator does something cool/interesting/different from the norm.
   easter_eggs = easter_eggs + 1;
   var meep_count = document.getElementById("input").innerHTML.split(" ").length - 1;
   //if the input happens to be zero-length then the easter eggs (which manipulate the input text in various ways) wouldn't actually work. Perhaps this can be improved somehow later.
