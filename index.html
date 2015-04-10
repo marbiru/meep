@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<!-- this is an external stylesheet called PureCSS; we are only actually using it for the buttons, at this point. Might be better to copy the specific styling of the buttons and then have everything in a single, meep-project-specific CSS external stylesheet -->
+ 
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:200">
-  <meta property="og:image" content="https://github.com/marbiru/meep/blob/gh-pages/images/Meep.png" /> 
+
+<style>
+
+/* this is the  style sheet */
+
+.basic {
+  font-size: 24px;
+  font-weight: normal;
+  font-family: "Raleway:200", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+.instructions {
+  font-size: 18px;
+  color: #777;
+  line-height: 1.6;
+  font-weight: 100;
+  text-align: center;
+}
+
+.buttons {
+  text-align:center;
+}
+
+h1 {
+  color: #4B4B4D;
+  font-size: 40px;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+</style>
+
 </head>
+
 <body>
+
+<!-- The HTML starts here -- this creates the buttons/fields/headers/instructions that show up on the page -->
 
 <h1> Meep Meep Mee Meep </h1>
 <p class="instructions"> 
@@ -114,35 +151,6 @@ function print_translation() {
   }
 
 </script>
-
-<style>
-
-.basic {
-  font-size: 24px;
-  font-weight: normal;
-  font-family: "Raleway:200", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-align: center;
-}
-
-.instructions {
-  font-size: 18px;
-  color: #777;
-  line-height: 1.6;
-  font-weight: 100;
-  text-align: center;
-}
-
-.buttons {
-  text-align:center;
-}
-
-h1 {
-  color: #4B4B4D;
-  font-size: 40px;
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-align: center;
-}
-</style>
 
 </body>
 </html> 
