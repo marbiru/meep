@@ -1,0 +1,22 @@
+.basic {
+  font-size: 24px;
+  font-weight: normal;
+  font-family: "Raleway:200", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+.instructions {
+  font-size: 18px;
+  color: #777;
+  line-height: 1.6;
+  font-weight: 100;
+  text-align: center;
+}
+.buttons {
+  text-align:center;
+}
+h1 {
+  color: #4B4B4D;
+  font-size: 40px;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
