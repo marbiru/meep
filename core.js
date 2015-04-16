@@ -8,23 +8,19 @@ $(function() {
     });
 });
 
-
-/* $(function(){
-  $('#mee_button').click() = print_mee;
-});
-
-function print_mee() {
-    document.getElementById("input").innerHTML = document.getElementById("input").innerHTML + ' Mee';
-} */
-
-
 // This makes the 'Meep' button print 'Meep' on screen
 
-document.getElementById("meep_button").onclick = print_meep;
+$(function() {
+    $("#meep_button").click(function(){
+        $("#input").append(' Meep')
+    });
+});
+
+/* document.getElementById("meep_button").onclick = print_meep;
 
 function print_meep() {
     document.getElementById("input").innerHTML = document.getElementById("input").innerHTML + ' Meep';
-}
+} */
 
 // This makes the 'Clear' button, which resests the on-screen mee(p)-sentence
 
