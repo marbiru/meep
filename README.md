@@ -26,4 +26,4 @@ This project is open-source under an MIT license. It might be a fun first coding
 
 Coding concepts used: buttons, document.getElementById, arrays, functions, count words in string, if/else, counting (increments)
 
-Languages used: javascript, html and css. Nothing else, not even jQuery or nothing.
+Languages/libraries used: javascript, html and css ---> and now jQuery too!
