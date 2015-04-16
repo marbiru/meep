@@ -52,24 +52,37 @@ var easter_eggs = 0
 
 document.getElementById("translate_button").onclick = print_translation;
 
+ //if the input happens to be zero-length then the easter eggs (which manipulate the input text in various ways) wouldn't actually work. Perhaps this can be improved somehow later.
+function zero_meeps(){
+  document.getElementById("translation").innerHTML = "(a MEEPLESS silence)";
+}
+
+//this easter egg just gives you back what you put in but with Meeps turned into Beeps and Mees into Bees
+function first_easter_egg(){
+  document.getElementById("translation").innerHTML = document.getElementById("input").innerHTML.replace(/Meep/g, 'Beep').replace(/Mee/g, 'Bee');
+}
+
+function second_easter_egg(){
+   //this easter egg just gives back what you put in but with the Mees and Meeps reversed. So e.g. "Meep Mee Mee Meep" would turn into "Mee Meep Meep Mee". Amusingly, the code needs a "placeholder" thingumajig because if you just tell it to replace Meep --> Mee and Mee --> Meep then EVERYTHING ends up as Meep... because all the Meeps get changed to Mees, first, and then everything gets turned back into Meeps! Perhaps there is a better way to write this code so that all substitutions happen simultaneously but I don't know how to do that.
+      document.getElementById("translation").innerHTML = document.getElementById("input").innerHTML.replace(/Meep/g, 'Placeholder').replace(/Mee/g, 'Meep').replace(/Placeholder/g, 'Mee');
+}
+
+
 function print_translation() {
-  //increments the easter_egg counter. Every time someone clicks "translate" the easter_egg counter goes up by one, so that we can make it happen that every X translations the translator does something cool/interesting/different from the norm.
   easter_eggs = easter_eggs + 1;
   var meep_count = document.getElementById("input").innerHTML.split(" ").length - 1;
-  //if the input happens to be zero-length then the easter eggs (which manipulate the input text in various ways) wouldn't actually work. Perhaps this can be improved somehow later.
+  //increments the easter_egg counter. Every time someone clicks "translate" the easter_egg counter goes up by one, so that we can make it happen that every X translations the translator does something cool/interesting/different from the norm.
   if (meep_count === 0) {
-      document.getElementById("translation").innerHTML = "(a meepless silence)";
+    zero_meeps();
   } else if (easter_eggs == 3) {
-      //this easter egg just gives you back what you put in but with Meeps turned into Beeps and Mees into Bees
-      document.getElementById("translation").innerHTML = document.getElementById("input").innerHTML.replace(/Meep/g, 'Beep').replace(/Mee/g, 'Bee');
+    first_easter_egg();  
   } else if (easter_eggs == 7) {
-    //this easter egg just gives back what you put in but with the Mees and Meeps reversed. So e.g. "Meep Mee Mee Meep" would turn into "Mee Meep Meep Mee". Amusingly, the code needs a "placeholder" thingumajig because if you just tell it to replace Meep --> Mee and Mee --> Meep then EVERYTHING ends up as Meep... because all the Meeps get changed to Mees, first, and then everything gets turned back into Meeps! Perhaps there is a better way to write this code so that all substitutions happen simultaneously but I don't know how to do that.
-      document.getElementById("translation").innerHTML = document.getElementById("input").innerHTML.replace(/Meep/g, 'Placeholder').replace(/Mee/g, 'Meep').replace(/Placeholder/g, 'Mee');
+    second_easter_egg();
   // check that input string is not longer than the longest English sentence in our dictionary. If the input string is short enough that we have a suitable translation, just do that translation.
   } else if (meep_count < translation_list.length) {
-      document.getElementById("translation").innerHTML = "&nbsp;" + translation_list[meep_count];
+     document.getElementById("translation").innerHTML = "&nbsp;" + translation_list[meep_count];
   } else {
   // if input string is too long then we just return an error message basically saying "woah, your string is too long". Hopefully the user will then "clear meeps" before continuing
-        document.getElementById("translation").innerHTML = "&nbsp;" + "Woah woah woah, that's a bit meeping much.";
+     document.getElementById("translation").innerHTML = "&nbsp;" + "Woah woah woah, that's a bit meeping much.";   
       }
   }
