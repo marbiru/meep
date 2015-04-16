@@ -50,7 +50,11 @@ var turn_count = 0
 
 // This makes the 'Translate' button print an English-language translation of the 'input' field
 
-document.getElementById("translate_button").onclick = print_translation;
+$(function() {
+    $("#translate_button").click(function(){
+        print_translation();
+    });
+});
 
  //if the input happens to be zero-length then the easter eggs (which manipulate the input text in various ways) wouldn't actually work. Perhaps this can be improved somehow later.
 
@@ -58,11 +62,8 @@ function zero_meeps(){
     $("#translation").text('(a meepless silence)');
 }
 
-/*function zero_meeps(){
-  document.getElementById("translation").innerHTML = "(a MEEPLESS silence)";
-} */
-
 //this easter egg just gives you back what you put in but with Meeps turned into Beeps and Mees into Bees
+
 function first_easter_egg(){
   document.getElementById("translation").innerHTML = document.getElementById("input").innerHTML.replace(/Meep/g, 'Beep').replace(/Mee/g, 'Bee');
 }
