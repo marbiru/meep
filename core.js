@@ -8,7 +8,7 @@ $(function() {
     });
 });
 
-// This makes the 'Meep' button print 'Meep' on screen
+// This makes the 'Meep' button print 'Meep' on screen. Could possibly be "consolidated" with the Mee button -- write one general-purpose function and then pass both options, mee and meep?
 
 $(function() {
     $("#meep_button").click(function(){
@@ -53,9 +53,14 @@ var turn_count = 0
 document.getElementById("translate_button").onclick = print_translation;
 
  //if the input happens to be zero-length then the easter eggs (which manipulate the input text in various ways) wouldn't actually work. Perhaps this can be improved somehow later.
+
 function zero_meeps(){
-  document.getElementById("translation").innerHTML = "(a meepless silence)";
+    $("#translation").text('(a meepless silence)');
 }
+
+/*function zero_meeps(){
+  document.getElementById("translation").innerHTML = "(a MEEPLESS silence)";
+} */
 
 //this easter egg just gives you back what you put in but with Meeps turned into Beeps and Mees into Bees
 function first_easter_egg(){
