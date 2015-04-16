@@ -24,11 +24,11 @@ function print_meep() {
 
 // This makes the 'Clear' button, which resests the on-screen mee(p)-sentence
 
-document.getElementById("clear_button").onclick = clear_meeps;
-
-function clear_meeps() {
-    document.getElementById("input").innerHTML = '&zwnj;'
-}
+$(function() {
+    $("#clear_button").click(function(){
+        $("#input").html('&zwnj;')
+    });
+});
 
 // a list of english-language sentences 
 
