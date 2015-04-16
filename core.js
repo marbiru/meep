@@ -1,10 +1,22 @@
+// Re-writing in jQuery
+
 // This makes the 'Mee' button print 'Mee's on screen
 
-document.getElementById("mee_button").onclick = print_mee;
+$(function() {
+    $("#mee_button").click(function(){
+        $("#input").append(' Mee')
+    });
+});
+
+
+/* $(function(){
+  $('#mee_button').click() = print_mee;
+});
 
 function print_mee() {
     document.getElementById("input").innerHTML = document.getElementById("input").innerHTML + ' Mee';
-}
+} */
+
 
 // This makes the 'Meep' button print 'Meep' on screen
 
