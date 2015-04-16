@@ -4,7 +4,7 @@
 
 $(function() {
     $("#mee_button").click(function(){
-        $("#input").append(' Mee')
+        $("#input").append(' Mee');
     });
 });
 
@@ -12,21 +12,15 @@ $(function() {
 
 $(function() {
     $("#meep_button").click(function(){
-        $("#input").append(' Meep')
+        $("#input").append(' Meep');
     });
 });
-
-/* document.getElementById("meep_button").onclick = print_meep;
-
-function print_meep() {
-    document.getElementById("input").innerHTML = document.getElementById("input").innerHTML + ' Meep';
-} */
 
 // This makes the 'Clear' button, which resests the on-screen mee(p)-sentence
 
 $(function() {
     $("#clear_button").click(function(){
-        $("#input").html('&zwnj;')
+        $("#input").html('&zwnj;');
     });
 });
 
